@@ -1,8 +1,6 @@
 # Electroporation
 
-# This code is a Python program, which is used for the theoretical calculation of the degree at which ITV occurred on the cell surface and the percentage of electroporated cell surface area for applied electric field ranging from 400 V/cm up to 1500 V/cm when
-1. cancer cell is alone and when it is among cluster of cancer cells.
-2. when the electric field applied along three directions.
+# This code is a Python program, which is used for the theoretical calculation of the degree at which ITV occurred on the cell surface and the percentage of electroporated cell surface area for applied electric field ranging from 400 V/cm up to 1500 V/cm when: 1. cancer cell is alone and when it is among cluster of cancer cells. 2. when the electric field applied along three directions.
 
 For more information about this project, see “https://www.researchsquare.com/article/rs-3861412/v1 OR https://doi.org/10.21203/rs.3.rs-3861412/v1” (Salim Mirshahi & Ameneh Sazgarnia), which is under review in the Journal of Molecular Modeling now.
 
