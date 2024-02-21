@@ -1,0 +1,171 @@
+"""
+Created on Wed Feb 21 21:38:01 2024
+
+@author: Salim Mirshahi
+"""
+
+# MD,FEM,AI Code for three directionally Applied electric field on the cancer cell (OR cancer cell culture)
+# -------------------------------------------------------------------------
+#
+#   This code is used for the theoretical calculation of the degree
+#   at which ITV occurred on the cell surface and the percentage of
+#   electroporated cell surface area for applied electric field ranging
+#   from 400 V/cm up to 1500 V/cm.
+#
+# --------------------------------------------------------------------------
+
+import math
+
+#define constants 
+AEF = [600, 700, 790]  #AEF[0] = AEF along X direction, AEF[1] = AEF along Y direction, AEF[2] = AEF along Z direction
+Cell_radius = 12.5*10**(-6)
+Total_Cell_Surface_Area = 4*3.14*(Cell_radius)**2
+#print (Total_Cell_Surface_Area)
+
+#functions to Initialize equations
+#// ITV=6701*sin⁡(0.000281X–0.002243), 400 < X < 1500 // Where X is the applied electric field or AEF in three dimentions.
+def MaxITV(AEF):
+      for i in range(0,3):
+        if 400 <= AEF[i] <= 1500:
+             g = 6701*math.sin(0.000281*AEF[i]-0.002243)
+             print(g)
+        else: print("Please ONLY choose AEF_X value between 400 and 1500 V/cm")
+
+print(MaxITV(AEF))
+#------------------------------------------------------------------------------------------------------------
+# θ_c = 111.3*sin⁡(0.003311X-1.943)+92.95*sin⁡(0.006613X-2.106)+48.38*sin⁡(0.008088X-5.824), 400 < X < 1500 // Where X is the applied electric field or AEF in three dimentions.
+def FEM_CA_AEF(AEF):
+   for i in range(0,3):   
+       h_FEM_CA_AEF = math.sin(0.003311*AEF[i]-1.943) 
+       l_FEM_CA_AEF = math.sin(0.006613*AEF[i]-2.106)
+       p_FEM_CA_AEF = math.sin(0.008088*AEF[i]-5.824)
+
+       if 400 <= AEF[i] <= 1500:
+             g = 111.3*h_FEM_CA_AEF+92.95*l_FEM_CA_AEF+48.38*p_FEM_CA_AEF
+             print(g)
+       else: print("Please ONLY choose AEF_X value between 400 and 1500 V/cm")
+     
+print(FEM_CA_AEF(AEF))
+#------------------------------------------------------------------------------------------------------------
+# S = 93.52*sin(0.003003X-1.741)+56.68*sin⁡(0.00592X-1.447)+23.28*sin(0.007647X-6.261), 400 < X < 1500 // Where X is the applied electric field or AEF in three dimentions.  
+def FEM_ECSA_AEF(AEF):
+    w=0
+    for i in range(0,3):   
+
+        h_FEM_ECSA_AEF = math.sin(0.003003*AEF[i]-1.741)
+        l_FEM_ECSA_AEF = math.sin(0.00592*AEF[i]-1.447)
+        p_FEM_ECSA_AEF = math.sin(0.007647*AEF[i]-6.261)
+        
+        if 400 <= AEF[i] <= 1500:
+             g = 93.52*h_FEM_ECSA_AEF+56.68*l_FEM_ECSA_AEF+23.28*p_FEM_ECSA_AEF
+             w += g
+             print(w)
+        else: print("Please ONLY choose AEF_X value between 400 and 1500 V/cm")
+    print('Total electroporated cell surface area:, ratio:, FEM_TECSA_AEF():')
+    p = w / Total_Cell_Surface_Area
+    return w, p
+    print(w, p)
+   
+print(FEM_ECSA_AEF(AEF))
+#------------------------------------------------------------------------------------------------------------
+# θ_c = 122.3*sin⁡(0.003425X-2.05)+106.3*sin⁡(0.006472X-1.97)+52.49*sin(0.007981X-5.925), 400 < X < 1500 // Where X is the applied electric field or AEF in three dimentions.
+def MD_CA_AEF(AEF):
+    for i in range(0,3):   
+     h_MD_CA_AEF = math.sin(0.003425*AEF[i]-2.05)
+     l_MD_CA_AEF = math.sin(0.006472*AEF[i]-1.97)
+     p_MD_CA_AEF = math.sin(0.007981*AEF[i]-5.925)
+
+     if 400 <= AEF[i] <= 1500: 
+             g = 122.3*h_MD_CA_AEF+106.3*l_MD_CA_AEF+52.49*p_MD_CA_AEF
+             print(g)
+     else: print("Please ONLY choose AEF_X value between 400 and 1500 V/cm")
+    
+print(MD_CA_AEF(AEF))
+#------------------------------------------------------------------------------------------------------------
+# S = 97.78*sin⁡(0.003004X-1.741)+62.88*sin⁡(0.005941X-1.503)+27.32*sin⁡(0.007487X-6.376), 400 < X < 1500 // Where X is the applied electric field or AEF in three dimentions.
+def MD_ECSA_AEF(AEF):
+    w=0
+    for i in range(0,3):   
+        h_MD_ECSA_AEF = math.sin(0.003004*AEF[i]-1.741)
+        l_MD_ECSA_AEF = math.sin(0.005941*AEF[i]-1.503)
+        p_MD_ECSA_AEF = math.sin(0.007487*AEF[i]-6.376)
+        
+        if 400 <= AEF[i] <= 1500:
+             g = 97.78*h_MD_ECSA_AEF+62.88*l_MD_ECSA_AEF+27.32*p_MD_ECSA_AEF
+             w += g
+             print(w)
+        else: print("Please ONLY choose AEF_X value between 400 and 1500 V/cm")
+    print('Total electroporated cell surface area:, ratio:, FEM_TECSA_AEF():')
+    p = w / Total_Cell_Surface_Area
+    return w, p
+    print(w, p)
+   
+print(MD_ECSA_AEF(AEF))
+#------------------------------------------------------------------------------------------------------------
+# PR= 2, CA = 5.3×10^(-6)*X^3-0.01134*X^2+8.06*X-1865  for 500 < X < 800 // Where X is the applied electric field or AEF in three dimentions.
+def PR2_FEM_CA_AEF(AEF):
+    for i in range(0,3):   
+     if 500 <= AEF[i] <= 800:
+             g = 5.3*10**(-6)*AEF[i]*AEF[i]*AEF[i]-0.01134*AEF[i]*AEF[i]+8.06*AEF[i]-1865
+             print(g)
+     else: print("Please ONLY choose AEF_X value between 500 and 800 V/cm")
+
+print(PR2_FEM_CA_AEF(AEF))
+#------------------------------------------------------------------------------------------------------------
+# PR= 3, CA = 5.481×10^(-6)*X^3-0.01161*X^2+8.217*X-1892 for 500 < X < 800 // Where X is the applied electric field or AEF in three dimentions. 
+def PR3_FEM_CA_AEF(AEF):
+    for i in range(0,3):   
+     if 500 <= AEF[i] <= 800:
+             g = 5.481*10**(-6)*AEF[i]*AEF[i]*AEF[i]-0.01161*AEF[i]*AEF[i]+8.217*AEF[i]-1892
+             print(g)
+     else: print("Please ONLY choose AEF_X value between 500 and 800 V/cm")
+
+print(PR3_FEM_CA_AEF(AEF))
+#------------------------------------------------------------------------------------------------------------
+# PR= 2, ECSA = 1.481*10^(-6)*X^3-0.003257*X^2+2.445*X-592   for 500 < X < 800 // Where X is the applied electric field or AEF in three dimentions.
+def PR2_FEM_ECSA_AEF(AEF):
+    w=0
+    for i in range(0,3):   
+     if 500 <= AEF[i] <= 800:
+        g = 1.481*10**(-6)*AEF[i]*AEF[i]*AEF[i]-0.003257*AEF[i]*AEF[i]+2.445*AEF[i]-592
+        w += g
+        print(w)
+     else: print("Please ONLY choose AEF_X value between 500 and 800 V/cm")
+    print('Total electroporated cell surface area:, ratio:, FEM_TECSA_AEF():')
+    p = w / Total_Cell_Surface_Area
+    return w, p
+    print(w, p)
+
+print(PR2_FEM_ECSA_AEF(AEF))
+#------------------------------------------------------------------------------------------------------------
+# PR= 3, ECSA = 1.111*10^(-6)*X^3-0.002471*X^2+1.892*X–462.1  for 500 < X < 800 // Where X is the applied electric field or AEF in three dimentions.
+def PR3_FEM_ECSA_AEF(AEF):
+    w=0
+    for i in range(0,3):   
+     if 500 <= AEF[i] <= 800:
+        g = 1.111*10**(-6)*AEF[i]*AEF[i]*AEF[i]-0.002471*AEF[i]*AEF[i]+1.892*AEF[i]-462.1
+        w += g
+        print(w)
+     else: print("Please ONLY choose AEF_X value between 500 and 800 V/cm")
+    print('Total electroporated cell surface area:, ratio:, FEM_TECSA_AEF():')
+    p = w / Total_Cell_Surface_Area
+    return w, p
+    print(w, p)
+
+print(PR3_FEM_ECSA_AEF(AEF))
+#------------------------------------------------------------------------------------------------------------
+# PR= 4, ECSA = 1.111*10^(-6)*X^3-0.002471*X^2+1.892X–462.1  for 500 < X < 800 // Where X is the applied electric field or AEF in three dimentions.
+def PR4_FEM_ECSA_AEF(AEF):
+    w=0
+    for i in range(0,3):   
+     if 500 <= AEF[i] <= 800:
+        g = 1.111*10**(-6)*AEF[i]*AEF[i]*AEF[i]-0.002471*AEF[i]*AEF[i]+1.892*AEF[i]-462.1
+        w += g
+        print(w)
+     else: print("Please ONLY choose AEF_X value between 500 and 800 V/cm")
+    print('Total electroporated cell surface area:, ratio:, FEM_TECSA_AEF():')
+    p = w / Total_Cell_Surface_Area
+    return w, p
+    print(w, p)
+
+print(PR4_FEM_ECSA_AEF(AEF))
