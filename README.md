@@ -1,5 +1,5 @@
 # Electroporation
-# This code is used for the theoretical calculation of the degree at which ITV occurred on the cell surface and the percentage of electroporated cell surface area for applied electric field ranging from 400 V/cm up to 1500 V/cm.
+# This code is used for the theoretical calculation of the degree at which ITV occurred on the cell surface and the percentage of electroporated cell surface area for applied electric field ranging from 400 V/cm up to 1500 V/cm when cancer cell is alone and when it is among cluster of cancer cells.
 
 Electroporation is a technique that creates electrically generated pores in the cell membrane by modifying transmembrane potential. In this work, the finite element method (FEM) was used to examine the induced transmembrane voltage (ITV) of a spherical-shaped MCF-7 cell, allowing researchers to determine the stationary ITV. A greater ITV than the critical value causes permeabilization of the membrane. Furthermore, the present study shows how a specific surface conductivity can act as a stand-in for the thin layer that constitutes a cell membrane as the barrier between extracellular and intracellular environments. Additionally, the distribution of ITV on the cell membrane and its maximum value were experimentally evaluated for a range of applied electric fields. Using Molecular Dynamics (MD) simulations of palmitoyloleoyl-phosphatidylcholine (POPC), pores in cell membranes exposed to external electric fields were numerically investigated. The dependence on electric field was estimated and developed, and the amount of the electroporated cell surface area matches the applied external electric field. Consequently, the entire cell surface area was electroporated 66% and 68% for MD and FEM, respectively, when the external electric field of 1500 V/cm was applied to the cell suspension using the previously indicated numerical methods. Furthermore, the lipid bilayers' molecular structure was changed, which led to the development of hydrophilic holes with a radius of 1.33 nm. Applying MD and FEM yielded threshold values for transmembrane voltage of 700 and 739 mV, respectively.
 
@@ -28,6 +28,7 @@ S = 97.78sin⁡(0.003004X-1.741)+62.88sin⁡(0.005941X-1.503)+27.32sin⁡(0.0074
 The relationship between applied electric field and the critical angle (θc) for different PRs is formulated using curve fitting based on data extracted from Table 3, as follows:
 
 PR= 2, θ_c = 5.3×10^(-6)X^3-0.01134X^2+8.06X-1865 for 500<X<800
+
 PR= 3, θ_c = 5.481×10^(-6)X^3-0.01161X^2+8.217X-1892 for 500<X<800
 
 Where X is the applied electric field.
@@ -35,6 +36,8 @@ Where X is the applied electric field.
  The relationship between the applied electric field and electroporated cell surface area (ECSA) for different PRs was formulated as following as well:
 
 PR= 2, ECSA=1.481×10^(-6)X^3-0.003257X^2+2.445X-592    for 500<X<800
+
 PR= 3, ECSA=1.111×10^(-6)X^3-0.002471X^2+1.892X–462.1  for 500<X<800
+
 PR= 4, ECSA=1.111×10^(-6)X^3-0.002471X^2+1.892X–462.1  for 500<X<800
 
