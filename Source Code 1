@@ -7,10 +7,11 @@ Created on Wed Feb 21 21:38:01 2024
 # MD,FEM,AI Code for three directionally Applied electric field on the cancer cell (OR cancer cell culture)
 # -------------------------------------------------------------------------
 #
-#   This code is used for the theoretical calculation of the degree
-#   at which ITV occurred on the cell surface and the percentage of
-#   electroporated cell surface area for applied electric field ranging
-#   from 400 V/cm up to 1500 V/cm.
+#   This code is a python program, which is used for the theoretical
+#   calculation of the degree at which ITV occurred on the cell surface
+#   and the percentage of electroporated cell surface area (MCF-7 cell line)
+#   for applied electric field ranging from 400 V/cm up to 1500 V/cm, based
+#   on the results achieved by FEM and by MD Method.
 #
 # --------------------------------------------------------------------------
 
