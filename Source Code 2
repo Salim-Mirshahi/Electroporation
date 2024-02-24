@@ -130,17 +130,17 @@ int main()
 	ob1.AEFs (600, 700, 1500);
 	AEF ob2 ;
 	ob2.AEFs (600, 700, 1500);
-    AEF ob3 ;
+        AEF ob3 ;
 	ob3.AEFs (600, 700, 1500);
-    AEF ob4 ;
+        AEF ob4 ;
 	ob4.AEFs (600, 700, 1500);
 	AEF ob5 ;
 	ob5.AEFs (600, 700, 1500);
 	AEF ob6 ;
 	ob6.AEFs (600, 700, 1500);
-    AEF ob7 ;
+        AEF ob7 ;
 	ob7.AEFs (600, 700, 1500);
-    AEF ob8 ;
+        AEF ob8 ;
 	ob8.AEFs (600, 700, 1500);
 	AEF ob9 ;
 	ob9.AEFs (600, 700, 1500);
@@ -150,21 +150,21 @@ int main()
 	ob11.AEFs (600, 700, 1500);
 	AEF ob12 ;
 	ob12.AEFs (600, 700, 1500);
-    AEF ob13 ;
+        AEF ob13 ;
 	ob13.AEFs (600, 700, 1500);
 	AEF ob14 ;
 	ob14.AEFs (600, 700, 1500);
-    AEF ob15 ;
+        AEF ob15 ;
 	ob15.AEFs (600, 700, 1500);
-    AEF ob16 ;
+        AEF ob16 ;
 	ob16.AEFs (600, 700, 1500);
 	AEF ob17 ;
 	ob17.AEFs (600, 700, 1500);
 	AEF ob18 ;
 	ob18.AEFs (600, 700, 1500);
-    AEF ob19 ;
+        AEF ob19 ;
 	ob19.AEFs (600, 700, 1500);
-    AEF ob20 ;
+        AEF ob20 ;
 	ob20.AEFs (600, 700, 1500);
 	AEF ob21 ;
 	ob21.AEFs (600, 700, 1500);
@@ -174,58 +174,60 @@ int main()
 	ob23.AEFs (600, 700, 1500);
 	AEF ob24 ;
 	ob24.AEFs (600, 700, 1500);
-    AEF ob25 ;
+        AEF ob25 ;
 	ob25.AEFs (600, 700, 1500);
 	AEF ob26 ;
-	ob26.AEFs (600, 700, 1500);
-    AEF ob27 ;
+ 	ob26.AEFs (600, 700, 1500);
+        AEF ob27 ;
 	ob27.AEFs (600, 700, 1500);
-    AEF ob28 ;
+        AEF ob28 ;
 	ob28.AEFs (600, 700, 1500);
 	AEF ob29 ;
 	ob29.AEFs (600, 700, 1500);
 	AEF ob30 ;
 	ob30.AEFs (600, 700, 1500);
 
- 	cout << "MaxITV_AEF_X = "            << ob1.MaxITV_AEF_X() <<"\n";
- 	cout << "MaxITV_AEF_Y = "            << ob2.MaxITV_AEF_Y() <<"\n";
- 	cout << "MaxITV_AEF_Z = "            << ob3.MaxITV_AEF_Z() <<"\n";
+ 	cout << "MaxITV_AEF_X = "              << ob1.MaxITV_AEF_X() <<"\n";
+ 	cout << "MaxITV_AEF_Y = "              << ob2.MaxITV_AEF_Y() <<"\n";
+ 	cout << "MaxITV_AEF_Z = "              << ob3.MaxITV_AEF_Z() <<"\n";
 
-  	cout << "FEM_CA_AEF_X = "              << ob2.FEM_CA_AEF_X() <<"\n";
-  	cout << "FEM_CA_AEF_Y = "              << ob2.FEM_CA_AEF_Y() <<"\n";
-  	cout << "FEM_CA_AEF_Z = "              << ob2.FEM_CA_AEF_Z() <<"\n";
+  	cout << "FEM_CA_AEF_X = "              << ob4.FEM_CA_AEF_X() <<"\n";
+  	cout << "FEM_CA_AEF_Y = "              << ob5.FEM_CA_AEF_Y() <<"\n";
+  	cout << "FEM_CA_AEF_Z = "              << ob6.FEM_CA_AEF_Z() <<"\n";
 
-  	cout << "FEM_ECSA_AEF_X = "            << ob3.FEM_ECSA_AEF_X() <<"\n";
-  	cout << "FEM_ECSA_AEF_Y = "            << ob3.FEM_ECSA_AEF_Y() <<"\n";
-  	cout << "FEM_ECSA_AEF_Z = "            << ob3.FEM_ECSA_AEF_Z() <<"\n";
+  	cout << "FEM_ECSA_AEF_X = "            << ob7.FEM_ECSA_AEF_X() <<"\n";
+  	cout << "FEM_ECSA_AEF_Y = "            << ob8.FEM_ECSA_AEF_Y() <<"\n";
+  	cout << "FEM_ECSA_AEF_Z = "            << ob9.FEM_ECSA_AEF_Z() <<"\n";
 
-  	cout << "MD_CA_AEF_X = "               << ob4.MD_CA_AEF_X() <<"\n";
-  	cout << "MD_CA_AEF_Y = "               << ob4.MD_CA_AEF_Y() <<"\n";
-  	cout << "MD_CA_AEF_Z = "               << ob4.MD_CA_AEF_Z() <<"\n";
+  	cout << "MD_CA_AEF_X = "               << ob10.MD_CA_AEF_X() <<"\n";
+  	cout << "MD_CA_AEF_Y = "               << ob11.MD_CA_AEF_Y() <<"\n";
+  	cout << "MD_CA_AEF_Z = "               << ob12.MD_CA_AEF_Z() <<"\n";
 
-  	cout << "MD_ECSA_AEF_X = "             << ob5.MD_ECSA_AEF_X() <<"\n";
-  	cout << "MD_ECSA_AEF_Y = "             << ob5.MD_ECSA_AEF_Y() <<"\n";
-  	cout << "MD_ECSA_AEF_Z = "             << ob5.MD_ECSA_AEF_Z() <<"\n";
+  	cout << "MD_ECSA_AEF_X = "             << ob13.MD_ECSA_AEF_X() <<"\n";
+  	cout << "MD_ECSA_AEF_Y = "             << ob14.MD_ECSA_AEF_Y() <<"\n";
+  	cout << "MD_ECSA_AEF_Z = "             << ob15.MD_ECSA_AEF_Z() <<"\n";
 
-  	cout << "PR2_FEM_CA_AEF_X = "          << ob6.PR2_FEM_CA_AEF_X() <<"\n";
-  	cout << "PR2_FEM_CA_AEF_Y = "          << ob6.PR2_FEM_CA_AEF_Y() <<"\n";
-  	cout << "PR2_FEM_CA_AEF_Z = "          << ob6.PR2_FEM_CA_AEF_Z() <<"\n";
+  	cout << "PR2_FEM_CA_AEF_X = "          << ob16.PR2_FEM_CA_AEF_X() <<"\n";
+  	cout << "PR2_FEM_CA_AEF_Y = "          << ob17.PR2_FEM_CA_AEF_Y() <<"\n";
+  	cout << "PR2_FEM_CA_AEF_Z = "          << ob18.PR2_FEM_CA_AEF_Z() <<"\n";
 
-  	cout << "PR3_FEM_CA_AEF_X = "          << ob7.PR3_FEM_CA_AEF_X() <<"\n";
-  	cout << "PR3_FEM_CA_AEF_Y = "          << ob7.PR3_FEM_CA_AEF_Y() <<"\n";
-  	cout << "PR3_FEM_CA_AEF_Z = "          << ob7.PR3_FEM_CA_AEF_Z() <<"\n";
+  	cout << "PR3_FEM_CA_AEF_X = "          << ob19.PR3_FEM_CA_AEF_X() <<"\n";
+  	cout << "PR3_FEM_CA_AEF_Y = "          << ob20.PR3_FEM_CA_AEF_Y() <<"\n";
+  	cout << "PR3_FEM_CA_AEF_Z = "          << ob21.PR3_FEM_CA_AEF_Z() <<"\n";
 
-  	cout << "PR2_FEM_ECSA_AEF_X = "        << ob8.PR2_FEM_ECSA_AEF_X() <<"\n";
-  	cout << "PR2_FEM_ECSA_AEF_Y = "        << ob8.PR2_FEM_ECSA_AEF_Y() <<"\n";
-  	cout << "PR2_FEM_ECSA_AEF_Z = "        << ob8.PR2_FEM_ECSA_AEF_Z() <<"\n";
+  	cout << "PR2_FEM_ECSA_AEF_X = "        << ob22.PR2_FEM_ECSA_AEF_X() <<"\n";
+  	cout << "PR2_FEM_ECSA_AEF_Y = "        << ob23.PR2_FEM_ECSA_AEF_Y() <<"\n";
+  	cout << "PR2_FEM_ECSA_AEF_Z = "        << ob24.PR2_FEM_ECSA_AEF_Z() <<"\n";
 
-  	cout << "PR3_FEM_ECSA_AEF_X = "        << ob9.PR3_FEM_ECSA_AEF_X() <<"\n";
-  	cout << "PR3_FEM_ECSA_AEF_Y = "        << ob9.PR3_FEM_ECSA_AEF_Y() <<"\n";
-  	cout << "PR3_FEM_ECSA_AEF_Z = "        << ob9.PR3_FEM_ECSA_AEF_Z() <<"\n";
+  	cout << "PR3_FEM_ECSA_AEF_X = "        << ob25.PR3_FEM_ECSA_AEF_X() <<"\n";
+  	cout << "PR3_FEM_ECSA_AEF_Y = "        << ob26.PR3_FEM_ECSA_AEF_Y() <<"\n";
+  	cout << "PR3_FEM_ECSA_AEF_Z = "        << ob27.PR3_FEM_ECSA_AEF_Z() <<"\n";
 
-  	cout << "PR4_FEM_ECSA_AEF_X = "        << ob10.PR4_FEM_ECSA_AEF_X() <<"\n";
-  	cout << "PR4_FEM_ECSA_AEF_Y = "        << ob10.PR4_FEM_ECSA_AEF_Y() <<"\n";
-  	cout << "PR4_FEM_ECSA_AEF_Z = "        << ob10.PR4_FEM_ECSA_AEF_Z() <<"\n";
+  	cout << "PR4_FEM_ECSA_AEF_X = "        << ob28.PR4_FEM_ECSA_AEF_X() <<"\n";
+  	cout << "PR4_FEM_ECSA_AEF_Y = "        << ob29.PR4_FEM_ECSA_AEF_Y() <<"\n";
+  	cout << "PR4_FEM_ECSA_AEF_Z = "        << ob30.PR4_FEM_ECSA_AEF_Z() <<"\n";
+
+
 
 	getch();
 }
