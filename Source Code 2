@@ -8,7 +8,7 @@ Created on Sat Feb 24 11:16:01 2024
 # MD,FEM,AI Code for three directionally Applied electric field on the cancer cell (OR cancer cell culture)
 # -------------------------------------------------------------------------
 #
-#   This code is a object-oriented C++ program, which is used for the theoretical
+#   This code is an object-oriented C++ program, which is used for the theoretical
 #   calculation of the degree at which ITV occurred on the cell surface
 #   and the percentage of electroporated cell surface area (MCF-7 cell line)
 #   for applied electric field ranging from 400 V/cm up to 1500 V/cm, based
