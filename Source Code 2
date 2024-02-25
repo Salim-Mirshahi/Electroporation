@@ -227,7 +227,5 @@ int main()
   	cout << "PR4_FEM_ECSA_AEF_Y = "        << ob29.PR4_FEM_ECSA_AEF_Y() <<"\n";
   	cout << "PR4_FEM_ECSA_AEF_Z = "        << ob30.PR4_FEM_ECSA_AEF_Z() <<"\n";
 
-
-
 	getch();
 }
